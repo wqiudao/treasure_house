@@ -1,0 +1,31 @@
+bug:when sample size is less than three, run(mageck count) will make  ctfit_tx$x[, 3] : subscript out of bounds err.
+solution:
+      It's a little bug in script， fastq_template.Rnw
+remove PC3=ctfit_tx$x[,3] 
+and add  pcareport$PC3=ctfit_tx$x[,3] under  if(ncol(slmat)>2)
+
+
+library(ggplot2)
+  if(ncol(slmat)>1){
+    #pcareport=data.frame(PC1=ctfit_tx$x[,1],PC2=ctfit_tx$x[,2],PC3=ctfit_tx$x[,3],sample=rownames(ctfit_tx$x))
+    pcareport=data.frame(PC1=ctfit_tx$x[,1],PC2=ctfit_tx$x[,2],sample=rownames(ctfit_tx$x))
+    p<-ggplot(pcareport,aes(x=PC1,y=PC2,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+  if(ncol(slmat)>2){
+    pcareport$PC3=ctfit_tx$x[,3]
+    p<-ggplot(pcareport,aes(x=PC1,y=PC3,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+    p<-ggplot(pcareport,aes(x=PC2,y=PC3,label=sample)) +
+       geom_point(aes(colour=sample)) +
+       geom_text(vjust='inward',hjust='inward')
+    print(p)
+  }
+  }
+
+
+
+     
