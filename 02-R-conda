@@ -2,4 +2,8 @@ Q1：When installing R pacgage "XML" in a conda environment, maybe,we get messag
 A1: very simple, you should install two library in conda environment: libtool and libxmlsec1
 R1: conda install -c carta libxmlsec1
     conda install -c conda-forge libtool
+
+Q2：fatal error: hdf5.h: No such file or directory
+R1：conda install -c anaconda hdf5
+
   
