@@ -1,0 +1,5 @@
+Q1：When installing R pacgage "XML" in a conda environment, maybe,we get message:"...cannot find -lltdl or ... cannot find -lxmlsec1". Actually, which means "cannot find -l ltdl" and "cannot find -l xmlsec1"
+A1: very simple, you should install two library in conda environment: libtool and libxmlsec1
+R1: conda install -c carta libxmlsec1
+    conda install -c conda-forge libtool
+  
