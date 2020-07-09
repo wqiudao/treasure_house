@@ -1,9 +1,9 @@
 Q1：When installing R pacgage "XML" in a conda environment, maybe,we get message:"...cannot find -lltdl or ... cannot find -lxmlsec1". Actually, which means "cannot find -l ltdl" and "cannot find -l xmlsec1"
-A1: very simple, you should install two library in conda environment: libtool and libxmlsec1
-R1: conda install -c carta libxmlsec1
+A : very simple, you should install two library in conda environment: libtool and libxmlsec1
+R : conda install -c carta libxmlsec1
     conda install -c conda-forge libtool
 
 Q2：fatal error: hdf5.h: No such file or directory
-R1：conda install -c anaconda hdf5
+R ：conda install -c anaconda hdf5
 
   
