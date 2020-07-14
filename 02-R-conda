@@ -6,4 +6,11 @@ R : conda install -c carta libxmlsec1
 Q2：fatal error: hdf5.h: No such file or directory
 R ：conda install -c anaconda hdf5
 
-  
+Q3: Reinstalling packages on new version of R (such as R3.x -> R4.x)
+R: 
+    lib_loc <- "/home/q202010/miniconda3/lib/R/library"
+    to_install <- unname(installed.packages(lib.loc = lib_loc)[, "Package"])
+    to_install
+    install.packages(pkgs = to_install)
+Ref: https://community.rstudio.com/t/reinstalling-packages-on-new-version-of-r/7670 
+ 
