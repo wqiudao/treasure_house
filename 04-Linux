@@ -1,2 +1,20 @@
 01.(bash shell) when running one bash script, maybe,we encounter some error message said "**line 1 #!/bin/bash: No such file or directory".
-  A: which is casued by disordered code. We should open bash scripts with vi Tool in console， and correct error.
+  A: which is casued by disordered code. We should open bash scripts with less Tool in console， and check error.
+     In first line, we shall see <U+FEFF>, source of error. 
+  R: convert bash scripts into UTF-8 without BOM 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
