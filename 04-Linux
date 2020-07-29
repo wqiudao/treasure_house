@@ -3,6 +3,15 @@
      In first line, we shall see <U+FEFF>, source of error. 
   R: convert bash scripts into UTF-8 without BOM 
 
+02 combine2oneFile.sh 
+  #!/bin/bash
+  echo $1
+  for file in $1/*
+  do
+  echo $file
+  cat $file
+  done
+
 
 
 
