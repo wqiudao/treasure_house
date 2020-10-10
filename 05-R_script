@@ -25,3 +25,4 @@ b[1]=0
 ggplot(dat, aes(x=time.tot, y=error, color=type)) +
   geom_line() + geom_point() + scale_y_continuous(breaks = b, labels=b, trans = tn)
   
+source_url https://stackoverflow.com/questions/38333603/ggplot-custom-scale-transformation-with-custom-ticks
