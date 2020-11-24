@@ -11,6 +11,9 @@
   echo $file
   cat $file
   done
+  
+03 shell
+ps -u usrname|grep python|awk '{print $1}'|xargs kill
 
 
 
